@@ -527,27 +527,30 @@ img {
   font-size: 16px;
   line-height: 1.88;
 }
-/* .portfolio-projects .description { 
+.portfolio-card {
+  position: relative;
+  overflow: hidden;
+}
+.portfolio-card::after {
   position: absolute;
+  display: block;
+  content: 'Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.';
   width: 100%;
-  height: 294px;
-  bottom: 0;
-  left: 0;
-  transform: translateY(100%);
+  height: 100%;
   padding: 63px 24px;
-  color: var(--clear-white-color);
-  background-color: var(--bg-portfolio-hover);
   font-size: 18px;
   line-height: 1.56;
-  /* opacity: 0;
-} */
-
-/* .portfolio-projects .link:hover .description, 
-.portfolio-projects .link:focus .description {
-  background-color: var(--bg-portfolio-hover);
   color: var(--clear-white-color);
-  opacity: 1;
-}*/
+  background-color: var(--bg-portfolio-hover);
+  /* top: 0;
+  left: 0;
+  transform: translateY(100%); */
+  transition: transform 250ms var(--transition-timing-function);
+}
+.portfolio-projects .link:hover .portfolio-card::after,
+.portfolio-projects .link:focus .portfolio-card::after {
+  transform: translateY(-100%);
+}
 .portfolio-projects .link:hover,
 .portfolio-projects .link:focus {
   box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
