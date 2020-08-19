@@ -23,6 +23,14 @@ body {
   color: $primary-text-color;
   letter-spacing: 0.03em;
 }
-.hero-title {
-  color: $clear-white-color;
+.hero {
+  &-title {
+    color: $clear-white-color;
+  }
+}
+
+.section {
+  &-title {
+    color: red;
+  }
 }
